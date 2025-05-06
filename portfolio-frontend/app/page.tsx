@@ -58,12 +58,14 @@ export default function Portfolio() {
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.6, duration: 0.8 }}
 					>
-						<Button
-							variant="outline"
-							className="rounded-full px-6 border-[#86868b] text-[#1d1d1f] hover:bg-[#1d1d1f] hover:text-white transition-all duration-300"
-						>
-							view my work <ArrowRight className="ml-2 h-4 w-4" />
-						</Button>
+            <a href="#projects">
+              <Button
+                variant="outline"
+                className="rounded-full px-6 border-[#86868b] text-[#1d1d1f] hover:bg-[#1d1d1f] hover:text-white transition-all duration-300"
+              >
+                view my work <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
 					</motion.div>
 				</motion.div>
 
@@ -173,7 +175,7 @@ export default function Portfolio() {
 			</section>
 
 			{/* Projects Section */}
-			<section className="py-24 px-4 md:px-8 max-w-6xl mx-auto">
+			<section id="projects" className="py-24 px-4 md:px-8 max-w-6xl mx-auto">
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -260,7 +262,7 @@ export default function Portfolio() {
 			<footer className="py-8 px-4 border-t border-[#e6e6e6]">
 				<div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
 					<p className="text-[#86868b] mb-4 md:mb-0">
-						© {new Date().getFullYear()} John Doe. All rights reserved.
+						© {new Date().getFullYear()} Jin Kim. All rights reserved.
 					</p>
 					<div className="flex gap-6">
 						<Link
