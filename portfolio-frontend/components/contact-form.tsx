@@ -12,13 +12,26 @@ import { CheckCircle } from "lucide-react"
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitted(true)
-    }, 1000)
+  
+    const form = e.target as HTMLFormElement
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value
+    }
+  
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+  
+    if (res.ok) setIsSubmitted(true)
   }
+  
 
   if (isSubmitted) {
     return (
@@ -56,6 +69,7 @@ export default function ContactForm() {
           </label>
           <Input
             id="name"
+            name="name"
             placeholder="Your name"
             className="rounded-xl border-[#e6e6e6] focus:border-[#1d1d1f] focus:ring-[#1d1d1f]"
             required
@@ -67,6 +81,7 @@ export default function ContactForm() {
           </label>
           <Input
             id="email"
+            name="email"
             type="email"
             placeholder="Your email"
             className="rounded-xl border-[#e6e6e6] focus:border-[#1d1d1f] focus:ring-[#1d1d1f]"
@@ -80,6 +95,7 @@ export default function ContactForm() {
         </label>
         <Input
           id="subject"
+          name="subject"
           placeholder="Subject of your message"
           className="rounded-xl border-[#e6e6e6] focus:border-[#1d1d1f] focus:ring-[#1d1d1f]"
           required
@@ -91,6 +107,7 @@ export default function ContactForm() {
         </label>
         <Textarea
           id="message"
+          name="message"
           placeholder="Your message"
           rows={5}
           className="rounded-xl border-[#e6e6e6] focus:border-[#1d1d1f] focus:ring-[#1d1d1f]"

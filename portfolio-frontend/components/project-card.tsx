@@ -9,9 +9,10 @@ interface ProjectCardProps {
   description: string
   image: string
   tags: string[]
+  link: string
 }
 
-export default function ProjectCard({ title, description, image, tags }: ProjectCardProps) {
+export default function ProjectCard({ title, description, image, tags, link }: ProjectCardProps) {
   return (
     <motion.div
       className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
@@ -30,7 +31,7 @@ export default function ProjectCard({ title, description, image, tags }: Project
         <div className="flex justify-between items-start mb-2">
           <h3 className="text-xl font-bold">{title}</h3>
           <motion.div whileHover={{ rotate: 45 }} transition={{ duration: 0.2 }}>
-            <Link href="#" className="text-[#86868b] hover:text-[#1d1d1f]">
+            <Link href={link} target="_blank" rel="noopener noreferrer"className="text-[#86868b] hover:text-[#1d1d1f]">
               <ArrowUpRight className="h-5 w-5" />
             </Link>
           </motion.div>

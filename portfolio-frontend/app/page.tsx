@@ -185,29 +185,13 @@ export default function Portfolio() {
 					</h2>
 					<div className="grid md:grid-cols-2 gap-8">
 						<ProjectCard
-							title="Finance App Redesign"
-							description="A complete redesign of a financial management application focusing on simplicity and data visualization."
-							image="/placeholder.svg?height=400&width=600"
-							tags={["UI/UX", "Mobile App", "Fintech"]}
+							title="SmartServe - AI Meal Planner"
+							description="An AI-powered meal planning app that generates personalized meal plans based on user preferences."
+							image="/smartserve.png"
+							tags={["UI/UX", "Web App", "LLM"]}
+              link="https://smartserveai.vercel.app/home"
 						/>
-						<ProjectCard
-							title="E-commerce Platform"
-							description="An end-to-end e-commerce solution with a focus on performance and conversion optimization."
-							image="/placeholder.svg?height=400&width=600"
-							tags={["Web App", "React", "E-commerce"]}
-						/>
-						<ProjectCard
-							title="Health Tracking Dashboard"
-							description="A comprehensive health metrics dashboard for a wellness startup."
-							image="/placeholder.svg?height=400&width=600"
-							tags={["Dashboard", "Data Viz", "Healthcare"]}
-						/>
-						<ProjectCard
-							title="Creative Portfolio Template"
-							description="A customizable portfolio template for creative professionals with animation effects."
-							image="/placeholder.svg?height=400&width=600"
-							tags={["Template", "Animation", "Creative"]}
-						/>
+						
 					</div>
 					<div className="text-center mt-12">
 						<Button
@@ -241,28 +225,27 @@ export default function Portfolio() {
 
 						<div className="flex justify-center gap-6 mt-12">
 							<Link
-								href="#"
-								className="text-[#86868b] hover:text-[#1d1d1f] transition-colors duration-300"
-							>
-								<Twitter className="h-6 w-6" />
-								<span className="sr-only">Twitter</span>
-							</Link>
-							<Link
-								href="#"
+								href="https://www.linkedin.com/in/kimjinhyeok/"
+                target="_blank"
+                rel="noopener noreferrer"
 								className="text-[#86868b] hover:text-[#1d1d1f] transition-colors duration-300"
 							>
 								<Linkedin className="h-6 w-6" />
 								<span className="sr-only">LinkedIn</span>
 							</Link>
 							<Link
-								href="#"
+								href="https://github.com/jinkim477"
+                target="_blank"
+                rel="noopener noreferrer"
 								className="text-[#86868b] hover:text-[#1d1d1f] transition-colors duration-300"
 							>
 								<Github className="h-6 w-6" />
 								<span className="sr-only">GitHub</span>
 							</Link>
 							<Link
-								href="#"
+								href="mailto:jinkim.swe@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
 								className="text-[#86868b] hover:text-[#1d1d1f] transition-colors duration-300"
 							>
 								<Mail className="h-6 w-6" />
