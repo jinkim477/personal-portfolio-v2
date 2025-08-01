@@ -144,17 +144,22 @@ export default function Portfolio() {
 							Skills & Expertise
 						</h2>
 						<div className="flex flex-wrap justify-center gap-3 md:gap-4">
+							<SkillBadge name="Agile Development" />
+							<SkillBadge name="Java" />
+							<SkillBadge name="C / C++" />
+							<SkillBadge name="Python" />
+							<SkillBadge name="React JS" />
 							<SkillBadge name="Next.js" />
-							<SkillBadge name="React" />
 							<SkillBadge name="HTML/CSS" />
 							<SkillBadge name="TS/JS" />
+							<SkillBadge name="UI/UX" />
 							<SkillBadge name="Figma" />
 							<SkillBadge name="Tailwind CSS" />
 							<SkillBadge name="Spring Boot" />
 							<SkillBadge name="Adobe Suite" />
-							<SkillBadge name="C / C++" />
-							<SkillBadge name="Python" />
-							<SkillBadge name="Java" />
+							<SkillBadge name="Google Suite" />
+							<SkillBadge name="Pytorch" />
+							<SkillBadge name="TensorFlow" />
 							<SkillBadge name="Cloud Deployment" />
 							<SkillBadge name="Digital Design" />
 							<SkillBadge name="JUnit" />
@@ -166,6 +171,7 @@ export default function Portfolio() {
 							<SkillBadge name="Pandas" />
 							<SkillBadge name="Matplotlib" />
 							<SkillBadge name="Assembly" />
+							<SkillBadge name="Bash" />
 						</div>
 					</motion.div>
 				</div>
