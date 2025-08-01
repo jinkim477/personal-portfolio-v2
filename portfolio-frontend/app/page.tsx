@@ -58,14 +58,14 @@ export default function Portfolio() {
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.6, duration: 0.8 }}
 					>
-            <a href="#projects">
-              <Button
-                variant="outline"
-                className="rounded-full px-6 border-[#86868b] text-[#1d1d1f] hover:bg-[#1d1d1f] hover:text-white transition-all duration-300"
-              >
-                view my work <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
+						<a href="#projects">
+							<Button
+								variant="outline"
+								className="rounded-full px-6 border-[#86868b] text-[#1d1d1f] hover:bg-[#1d1d1f] hover:text-white transition-all duration-300"
+							>
+								view my work <ArrowRight className="ml-2 h-4 w-4" />
+							</Button>
+						</a>
 					</motion.div>
 				</motion.div>
 
@@ -98,7 +98,7 @@ export default function Portfolio() {
 								transition={{ duration: 0.4 }}
 							>
 								<img
-									src="/profile.jpeg"
+									src="/profile2.jpeg"
 									alt="Profile"
 									className="w-full h-full object-cover"
 								/>
@@ -122,12 +122,9 @@ export default function Portfolio() {
 								inspired.
 							</p>
 							<Button className="rounded-full px-6 bg-[#1d1d1f] hover:bg-[#424245] text-white transition-all duration-300">
-                <a
-                  href="/resume.pdf"
-                  download
-                >
-								  Download Resume
-                </a>
+								<a href="/resume.pdf" download>
+									Download Resume
+								</a>
 							</Button>
 						</div>
 					</div>
@@ -183,7 +180,7 @@ export default function Portfolio() {
 					viewport={{ once: true, margin: "-100px" }}
 				>
 					<h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-						Selected Projects
+						Selected Projects + Work Experience
 					</h2>
 					<div className="grid md:grid-cols-2 gap-8">
 						<ProjectCard
@@ -191,17 +188,15 @@ export default function Portfolio() {
 							description="An AI-powered meal planning app that generates personalized meal plans based on user preferences."
 							image="/smartserve.png"
 							tags={["UI/UX", "Web App", "LLM"]}
-              link="https://smartserveai.vercel.app/home"
+							link="https://smartserveai.vercel.app/home"
 						/>
-						
-					</div>
-					<div className="text-center mt-12">
-						<Button
-							variant="outline"
-							className="rounded-full px-6 border-[#86868b] text-[#1d1d1f] hover:bg-[#1d1d1f] hover:text-white transition-all duration-300"
-						>
-							View All Projects <ArrowRight className="ml-2 h-4 w-4" />
-						</Button>
+						<ProjectCard
+							title="Tot Spot Preschool Website"
+							description="Official website for Tot Spot Preschool, showcasing their programs and services."
+							image="/totspot-ss.png"
+							tags={["UI/UX", "CMS", "Website"]}
+							link="https://totspotpreschool.ca"
+						/>
 					</div>
 				</motion.div>
 			</section>
@@ -228,8 +223,8 @@ export default function Portfolio() {
 						<div className="flex justify-center gap-6 mt-12">
 							<Link
 								href="https://www.linkedin.com/in/kimjinhyeok/"
-                target="_blank"
-                rel="noopener noreferrer"
+								target="_blank"
+								rel="noopener noreferrer"
 								className="text-[#86868b] hover:text-[#1d1d1f] transition-colors duration-300"
 							>
 								<Linkedin className="h-6 w-6" />
@@ -237,8 +232,8 @@ export default function Portfolio() {
 							</Link>
 							<Link
 								href="https://github.com/jinkim477"
-                target="_blank"
-                rel="noopener noreferrer"
+								target="_blank"
+								rel="noopener noreferrer"
 								className="text-[#86868b] hover:text-[#1d1d1f] transition-colors duration-300"
 							>
 								<Github className="h-6 w-6" />
@@ -246,8 +241,8 @@ export default function Portfolio() {
 							</Link>
 							<Link
 								href="mailto:jinkim.swe@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
+								target="_blank"
+								rel="noopener noreferrer"
 								className="text-[#86868b] hover:text-[#1d1d1f] transition-colors duration-300"
 							>
 								<Mail className="h-6 w-6" />
